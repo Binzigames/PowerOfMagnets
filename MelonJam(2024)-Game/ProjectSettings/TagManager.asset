@@ -12,14 +12,9 @@ TagManager:
   - Ground
   - Water
   - UI
-<<<<<<< Updated upstream
-  - Player
-  - 
-=======
   - Enemy
   - Player
->>>>>>> Stashed changes
-  - 
+  - Stairs
   - 
   - 
   - 
@@ -44,27 +39,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BG
-    uniqueID: 212682365
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: DecorUnder
-    uniqueID: 2519627761
+  - name: BG
+    uniqueID: 3535097157
+    locked: 0
+  - name: Under
+    uniqueID: 3713456371
     locked: 0
   - name: Enemy
-    uniqueID: 708310653
+    uniqueID: 1355822995
     locked: 0
   - name: Player
-    uniqueID: 297868725
+    uniqueID: 452899517
     locked: 0
-  - name: Bullets
-    uniqueID: 4148284937
+  - name: Bullet
+    uniqueID: 2178461789
     locked: 0
-  - name: DecorAbove
-    uniqueID: 1818452911
+  - name: Above
+    uniqueID: 169480579
     locked: 0
   - name: FG
-    uniqueID: 2277721073
+    uniqueID: 2314826931
     locked: 0
