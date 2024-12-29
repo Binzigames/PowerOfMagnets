@@ -246,17 +246,29 @@ MonoBehaviour:
   _onEnterInAcceptZone:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 14877358}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+      - m_Target: {fileID: 455598621}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ChangeSceneWithDelay
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 880003275}
+        m_TargetAssemblyTypeName: Transition, Assembly-CSharp
+        m_MethodName: PlayTransition
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &350222103
 GameObject:
@@ -335,6 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 455598620}
+  - component: {fileID: 455598621}
   m_Layer: 0
   m_Name: Buttons
   m_TagString: Untagged
@@ -358,6 +371,19 @@ Transform:
   - {fileID: 14877359}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &455598621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455598619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86fa9fb9a1cb5a04f8afd9143069a8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _changeSceneDelay: 2
 --- !u!1 &566085126
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +799,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &880003275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 996473164015135829, guid: 035b804527559e441843786c5091b584, type: 3}
+  m_PrefabInstance: {fileID: 2620902085967661543}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69d0cfcdd4312f24e9dbb6f07036c1e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1098338963
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,8 +977,8 @@ Camera:
   m_GameObject: {fileID: 1450109707}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1285,7 +1322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1768760750
 Transform:
   m_ObjectHideFlags: 0

@@ -38,13 +38,13 @@ public class Transition : MonoBehaviour
         
     }
 
-    public void PlayTransition(TransitionDirection transitionDirection)
+    public void PlayTransition(bool up)
     {
-        if (transitionDirection == TransitionDirection.Up)
+        if (up)
         {
             _transition.DOMoveY(_upEndPos.position.y, _transitionTime);
         }
-        else if (transitionDirection == TransitionDirection.Down)
+        else if (up)
         {
             _transition.DOMoveY(_downEndPos.position.y, _transitionTime);
         }
