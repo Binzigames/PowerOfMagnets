@@ -12,6 +12,10 @@ public class Lever : MonoBehaviour
     [SerializeField] private float _moveSpeed = 3f;
     [SerializeField] private bool _moveHorizontal = false;
     [SerializeField] private bool _moveVertical = false;
+
+    [Space]
+    [SerializeField] private Transform _firstPos;
+    [SerializeField] private Transform _secondPos;
     private LeverState _leverState = LeverState.Off;
 
     enum LeverState
@@ -46,11 +50,17 @@ public class Lever : MonoBehaviour
 
         if (_leverState == LeverState.On)
         {
-            _gameObjectToMove.position += new Vector3(_moveHorizontal ? _moveSpeed * Time.deltaTime : 0f, _moveVertical ? _moveSpeed * Time.deltaTime : 0f);
+            if (_firstPos.position.x > _gameObjectToMove.position.x && _moveHorizontal || _firstPos.position.y > _gameObjectToMove.position.y && _moveVertical)
+            {
+                _gameObjectToMove.position += new Vector3(_moveHorizontal ? _moveSpeed * Time.deltaTime : 0f, _moveVertical ? _moveSpeed * Time.deltaTime : 0f);
+            }
         }
         else if (_leverState == LeverState.Off)
         {
-            _gameObjectToMove.position -= new Vector3(_moveHorizontal ? _moveSpeed * Time.deltaTime : 0f, _moveVertical ? _moveSpeed * Time.deltaTime : 0f);
+            if (_secondPos.position.x < _gameObjectToMove.position.x && _moveHorizontal || _secondPos.position.y < _gameObjectToMove.position.y && _moveVertical)
+            {
+                _gameObjectToMove.position -= new Vector3(_moveHorizontal ? _moveSpeed * Time.deltaTime : 0f, _moveVertical ? _moveSpeed * Time.deltaTime : 0f);
+            }
         }
     }
 }

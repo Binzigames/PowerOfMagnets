@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Button
+  - AcceptButton
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,6 @@ TagManager:
   - Enemy
   - Player
   - Stairs
-  - 
-  - 
-  - 
   - 
   - 
   - 
