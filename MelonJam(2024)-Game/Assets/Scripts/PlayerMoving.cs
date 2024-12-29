@@ -11,12 +11,14 @@ public class PlayerMoving : MonoBehaviour
     private float moveInput;
 
     [SerializeField] private KeyCode jumpKey;
+    [SerializeField] private KeyCode downStairsKey;
     [SerializeField] private LayerMask jumpLayer;
     [SerializeField] private LayerMask stairsLayer;
     [SerializeField] private float radiusJumping;
     [SerializeField] private Transform feetPos;
     private bool isGrounded;
     private bool isStairs;
+    private float defaultGravityScale;
 
     private Animator animator;
 
@@ -24,6 +26,7 @@ public class PlayerMoving : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        defaultGravityScale = rb.gravityScale;
     }
 
     private void Update()
@@ -83,9 +86,28 @@ public class PlayerMoving : MonoBehaviour
     private void Stairs()
     {
         isStairs = Physics2D.OverlapCircle(feetPos.position, radiusJumping, stairsLayer);
-        if (isStairs == true && isUnlockMoving == true && Input.GetKey(jumpKey))
+        if (isStairs == true && isUnlockMoving == true)
         {
-            rb.velocity = Vector2.up * stairsForce;
+            rb.gravityScale = 0;
+
+            if (Input.GetKey(jumpKey))
+            {
+                rb.velocity = Vector2.up * stairsForce;
+            }
+
+            else if (Input.GetKey(downStairsKey))
+            {
+                rb.velocity = Vector2.down * stairsForce;
+            }
+
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+            }
+        }
+        else
+        {
+            rb.gravityScale = defaultGravityScale;
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float lifetime;
-
+    public LayerMask ground;
     private void Start()
     {
         Destroy(gameObject, lifetime);
@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("Player damage");
         }
-        if (collision.gameObject.layer == 3) //ground
+        if (collision.gameObject.layer == ground)
         {
             Destroy(gameObject);
         }
