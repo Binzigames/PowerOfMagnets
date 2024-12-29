@@ -100,9 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 2
-  ground:
-    serializedVersion: 2
-    m_Bits: 8
+  ground: 3
 --- !u!50 &-5308016013943187104
 Rigidbody2D:
   serializedVersion: 4

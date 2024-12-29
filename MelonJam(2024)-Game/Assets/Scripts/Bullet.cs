@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float lifetime;
-    public LayerMask ground;
+    public int ground;
     private void Start()
     {
         Destroy(gameObject, lifetime);
