@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23000094}
   - component: {fileID: 23000095}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 48117691}
   - component: {fileID: 48117692}
   - component: {fileID: 48117693}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: stairs (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53384210}
   - component: {fileID: 53384211}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76992012}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: wallChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 97890158}
   - component: {fileID: 97890159}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FillBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 138473554}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Spawnpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,7 +801,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 175286890}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShootPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 239781309}
   - component: {fileID: 239781310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,7 +917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254871623}
   - component: {fileID: 254871624}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301208586}
   - component: {fileID: 301208587}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1084,7 +1084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 326981099}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GunSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1126,7 +1126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336141564}
   - component: {fileID: 336141565}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 339153441}
   - component: {fileID: 339153440}
   - component: {fileID: 339153444}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1284,7 +1284,7 @@ Transform:
   m_GameObject: {fileID: 339153439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.91, y: 2.56, z: 0}
+  m_LocalPosition: {x: -8.09, y: 0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1323,7 +1323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 566093677}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GunFillBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1616,7 +1616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 607911854}
   - component: {fileID: 607911855}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1700,7 +1700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 642559456}
   - component: {fileID: 642559457}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1783,7 +1783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 655818348}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1947,7 +1947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 769757578}
   - component: {fileID: 769757579}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2281,6 +2281,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &973756638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973756639}
+  m_Layer: 0
+  m_Name: PatrolPointTwo
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973756639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973756638}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.26, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1060626897}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1060626896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060626897}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1060626897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060626896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.28, y: -0.413, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1406251660}
+  - {fileID: 1163005262}
+  - {fileID: 973756639}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1119847356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,7 +2356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119847357}
   - component: {fileID: 1119847358}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2495,6 +2560,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1163005261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163005262}
+  m_Layer: 0
+  m_Name: PatrolPointOne
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163005262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163005261}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.74, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1060626897}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178995031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,7 +2600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178995032}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: feetPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2614,7 +2710,7 @@ Transform:
   m_GameObject: {fileID: 1240870267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0129428, y: -0.042730093, z: -10}
+  m_LocalPosition: {x: -1.0129428, y: -0.042729974, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2707,7 +2803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1300877663}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: groundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2810,7 +2906,7 @@ Transform:
   m_GameObject: {fileID: 1342989746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.91, y: 2.56, z: -10}
+  m_LocalPosition: {x: -8.09, y: 0.95, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2959,7 +3055,7 @@ GameObject:
   - component: {fileID: 1406251659}
   - component: {fileID: 1406251658}
   - component: {fileID: 1406251661}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3036,8 +3132,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406251657}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.008726558, z: 0, w: 0.999962}
-  m_LocalPosition: {x: 0, y: 2.97, z: 0}
+  m_LocalRotation: {x: -0, y: 0.008726558, z: -0, w: 0.999962}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3046,7 +3142,7 @@ Transform:
   - {fileID: 76992012}
   - {fileID: 1807758094}
   - {fileID: 138473554}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1060626897}
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
 --- !u!114 &1406251661
 MonoBehaviour:
@@ -3068,7 +3164,7 @@ MonoBehaviour:
   shootingRange: {x: 4.56, y: 2.08}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1024
   moveSpeed: 4
   groundCheck: {fileID: 1300877663}
   wallCheck: {fileID: 76992012}
@@ -3077,6 +3173,12 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 8
+  patrolSpeed: 2
+  pointOne: {fileID: 1163005262}
+  pointTwo: {fileID: 973756639}
+  deltaPoint: 0.2
+  maxTimeOnPoint: 2
+  minTimeOnPoint: 0.5
 --- !u!1 &1499577768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3087,7 +3189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499577769}
   - component: {fileID: 1499577770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3171,7 +3273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1542023414}
   - component: {fileID: 1542023415}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3336,7 +3438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1745139966}
   - component: {fileID: 1745139967}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3985,7 +4087,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807758094}
   - component: {fileID: 1807758095}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4330,7 +4432,7 @@ GameObject:
   - component: {fileID: 2061679020}
   - component: {fileID: 2061679021}
   - component: {fileID: 2061679022}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4458,5 +4560,5 @@ SceneRoots:
   - {fileID: 1702366408}
   - {fileID: 339153443}
   - {fileID: 1788520851}
-  - {fileID: 1406251660}
+  - {fileID: 1060626897}
   - {fileID: 655818348}

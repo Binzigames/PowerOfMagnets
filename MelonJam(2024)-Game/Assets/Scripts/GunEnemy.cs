@@ -21,20 +21,36 @@ public class GunEnemy : MonoBehaviour
     public float wallCheckRadius;
     public LayerMask obstacleLayer;
 
+    [Header("Patrol")]
+    public float patrolSpeed;
+    public Transform pointOne;
+    public Transform pointTwo;
+    public float deltaPoint;
+    public float maxTimeOnPoint;
+    public float minTimeOnPoint;
+    private float point;
+    private float timeOnPoint;
+
+    private float patrolTimer = 0;
+    private float shootTimer = 0;
     private Transform player;
-    private float timer;
     private Rigidbody2D rb;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+
+        point = pointOne.position.x;
+        timeOnPoint = maxTimeOnPoint;
     }
 
     private void Update()
     {
         if (player != null && IsPlayerInRange(detectionRange))
         {
+            patrolTimer = 0;
+
             if (transform.position.x < player.position.x)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -61,17 +77,17 @@ public class GunEnemy : MonoBehaviour
             }
 
             //Стрільба
-            timer += Time.deltaTime;
-            if (timer >= shootInterval)
+            shootTimer += Time.deltaTime;
+            if (shootTimer >= shootInterval)
             {
-                timer = 0;
+                shootTimer = 0;
                 Shoot();
             }
         }
         else
         {
-            StopMovement();
-            timer = 0;
+            Patrol();
+            shootTimer = 0;
         }
     }
 
@@ -110,6 +126,39 @@ public class GunEnemy : MonoBehaviour
         if (rb != null)
         {
             rb.velocity = shootPoint.right * bulletSpeed;
+        }
+    }
+
+    private void Patrol()
+    {
+        if (Mathf.Abs(transform.position.x - point) < 0.1f)
+        {
+            rb.velocity = Vector2.zero;
+            patrolTimer += Time.deltaTime;
+            if (patrolTimer >= timeOnPoint)
+            {
+                patrolTimer = 0;
+                timeOnPoint = Random.Range(minTimeOnPoint, maxTimeOnPoint);
+
+                float pointBefore = point;
+                do
+                {
+                    point = Random.Range(pointOne.position.x, pointTwo.position.x);
+                } while (Mathf.Abs(Mathf.InverseLerp(pointOne.position.x, pointTwo.position.x, point) - Mathf.InverseLerp(pointOne.position.x, pointTwo.position.x, pointBefore)) < deltaPoint);
+            }
+        }
+        else
+        {
+            if (transform.position.x > point)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+                rb.velocity = new Vector2(-patrolSpeed, rb.velocity.y);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                rb.velocity = new Vector2(patrolSpeed, rb.velocity.y);
+            }
         }
     }
 

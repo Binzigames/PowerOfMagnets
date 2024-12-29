@@ -44,12 +44,12 @@ public class PlayerMoving : MonoBehaviour
         {
             if (moveInput > 0)
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
                 animator.SetBool("isRunning", true);
             }
             else if (moveInput < 0)
             {
-                transform.eulerAngles = new Vector3(0, 180, 0);
+                transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
                 animator.SetBool("isRunning", true);
             }
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
