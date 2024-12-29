@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            HealthManager healthManager = collision.transform.GetComponent<HealthManager>();
+            healthManager.TakeDamage(1);
             Destroy(gameObject);
             Debug.Log("Player damage");
         }
