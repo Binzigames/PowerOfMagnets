@@ -1,10 +1,12 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Transition : MonoBehaviour
 {
     [SerializeField] private TransitionDirection _defaultTransition;
     [SerializeField] private float _transitionTime = 1f;
+    [SerializeField] private float _delayTime = 1f;
 
     [Space]
     [SerializeField] private Transform _transition;
@@ -24,6 +26,8 @@ public class Transition : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
+            SceneManager.activeSceneChanged += OnSceneChanged;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -44,9 +48,9 @@ public class Transition : MonoBehaviour
         {
             _transition.DOMoveY(_upEndPos.position.y, _transitionTime);
         }
-        else if (up)
+        else
         {
-            _transition.DOMoveY(_downEndPos.position.y, _transitionTime);
+            _transition.DOMoveY(_downEndPos.position.y, _transitionTime).SetDelay(_delayTime);
         }
     }
 
@@ -58,7 +62,12 @@ public class Transition : MonoBehaviour
         }
         else if (_defaultTransition == TransitionDirection.Down)
         {
-            _transition.DOMoveY(_downEndPos.position.y, _transitionTime);
+            _transition.DOMoveY(_downEndPos.position.y, _transitionTime).SetDelay(_delayTime);
         }
+    }
+
+    void OnSceneChanged(Scene scene1, Scene scene2)
+    {
+        PlayTransition(false);
     }
 }

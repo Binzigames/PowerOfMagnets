@@ -1597,8 +1597,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 996473164015135829, guid: 035b804527559e441843786c5091b584, type: 3}
-      propertyPath: _transitionTime
+      propertyPath: _delayTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 996473164015135829, guid: 035b804527559e441843786c5091b584, type: 3}
+      propertyPath: _transitionTime
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 996473164015135829, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: _defaultTransition
@@ -1614,7 +1618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4853051356932899446, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -37.6
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 5422567113048465714, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: m_Camera
