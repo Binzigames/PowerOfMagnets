@@ -9,12 +9,12 @@ public class SoundOffOn : MonoBehaviour
         if (_soundEnabled)
         {
             _soundEnabled = false;
-            MusicsManager._instance._audioSource.volume = 0.75f;
+            MusicsManager._instance._audioSource.volume = 0f;
         }
         else
         {
             _soundEnabled = true;
-            MusicsManager._instance._audioSource.volume = 0f;
+            MusicsManager._instance._audioSource.volume = 0.75f;
         }
     }
 }

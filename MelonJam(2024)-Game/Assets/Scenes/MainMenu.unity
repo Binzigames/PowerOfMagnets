@@ -247,6 +247,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isPlayButton: 1
+  _isMusicButton: 0
   _haveAction: 1
 --- !u!1 &23066755
 GameObject:
@@ -435,7 +436,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 455598622}
         m_TargetAssemblyTypeName: SoundOffOn, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: EnableDisableSounds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -446,6 +447,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _isPlayButton: 0
+  _isMusicButton: 0
   _haveAction: 1
 --- !u!50 &38353334
 Rigidbody2D:
@@ -5756,6 +5758,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isPlayButton: 0
+  _isMusicButton: 0
   _haveAction: 0
 --- !u!50 &417937031
 Rigidbody2D:
@@ -6310,7 +6313,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d280674148308e64f80947cbac07f999, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6600,6 +6603,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _isPlayButton: 0
+  _isMusicButton: 0
   _haveAction: 0
 --- !u!114 &597880802
 MonoBehaviour:
@@ -7164,6 +7168,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   _isPlayButton: 0
+  _isMusicButton: 0
   _haveAction: 1
 --- !u!50 &786123290
 Rigidbody2D:
@@ -7313,6 +7318,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _isPlayButton: 0
+  _isMusicButton: 0
   _haveAction: 1
 --- !u!50 &841276312
 Rigidbody2D:
@@ -8332,6 +8338,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   _isPlayButton: 0
+  _isMusicButton: 0
   _haveAction: 1
 --- !u!50 &1614903128
 Rigidbody2D:
@@ -9238,8 +9245,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1199555385079780122, guid: 035b804527559e441843786c5091b584, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199555385079780122, guid: 035b804527559e441843786c5091b584, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199555385079780122, guid: 035b804527559e441843786c5091b584, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199555385079780122, guid: 035b804527559e441843786c5091b584, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199555385079780122, guid: 035b804527559e441843786c5091b584, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199555385079780122, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 1180
       objectReference: {fileID: 0}
     - target: {fileID: 1199555385079780122, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -9255,7 +9282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4853051356932899446, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1200
+      value: -2175
       objectReference: {fileID: 0}
     - target: {fileID: 5422567113048465714, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: m_Camera
