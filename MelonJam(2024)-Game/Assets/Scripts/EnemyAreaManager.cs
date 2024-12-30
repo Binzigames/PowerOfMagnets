@@ -20,6 +20,7 @@ public class EnemyAreaManager : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= respawnTimer)
             {
+                timer = 0;
                 enemyCounter++;
                 Instantiate(enemyPrefab, pointToSpawn.position, pointToSpawn.rotation);
             }
