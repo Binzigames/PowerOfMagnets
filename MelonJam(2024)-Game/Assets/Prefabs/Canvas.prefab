@@ -225,7 +225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pregress To Leave
+  m_text: Progress To Leave
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f5ad8b348b6806243b0d1492a3abdf95, type: 2}
   m_sharedMaterial: {fileID: -6109180772078708012, guid: f5ad8b348b6806243b0d1492a3abdf95, type: 2}

@@ -13,7 +13,9 @@ public class Transition : MonoBehaviour
     [SerializeField] private Transform _upEndPos;
     [SerializeField] private Transform _downEndPos;
 
+    private int _lastSceneIndex = 0;
     public static Transition _instance;
+
 
     public enum TransitionDirection
     {
@@ -26,7 +28,6 @@ public class Transition : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            SceneManager.activeSceneChanged += OnSceneChanged;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -39,7 +40,10 @@ public class Transition : MonoBehaviour
 
     void Update()
     {
-        
+        if (_lastSceneIndex != SceneManager.GetActiveScene().buildIndex)
+        {
+            OnSceneChanged();
+        }
     }
 
     public void PlayTransition(bool up)
@@ -71,7 +75,7 @@ public class Transition : MonoBehaviour
         }
     }
 
-    void OnSceneChanged(Scene scene1, Scene scene2)
+    void OnSceneChanged()
     {
         PlayTransition(false);
     }
