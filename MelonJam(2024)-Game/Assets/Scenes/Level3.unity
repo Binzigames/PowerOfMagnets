@@ -23417,10 +23417,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 2756213405119619227, guid: 63d4d86b7cb1483419533cd672234fbd, type: 3}
-      propertyPath: _health
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3457880416843235056, guid: 63d4d86b7cb1483419533cd672234fbd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.08
@@ -23463,10 +23459,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5528489565035073978, guid: 63d4d86b7cb1483419533cd672234fbd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8616498391185495052, guid: 63d4d86b7cb1483419533cd672234fbd, type: 3}
-      propertyPath: playerLayer.m_Bits
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
