@@ -20,7 +20,7 @@ public class MagnetBullet : MonoBehaviour
     {
         if (!_damaged)
         {
-            if (other.transform.TryGetComponent<GunEnemy>(out GunEnemy gunEnemy))
+            if (other.transform.TryGetComponent<GunEnemy>(out GunEnemy gunEnemy) || other.transform.TryGetComponent<Boss>(out Boss boss))
             {
                 HealthManager healthManager = other.transform.GetComponent<HealthManager>();
                 healthManager.TakeDamage(_damage);
