@@ -22,11 +22,15 @@ public class PlayerMoving : MonoBehaviour
 
     private Animator animator;
 
+    public Vector2 _spawnPos { get; private set; }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         defaultGravityScale = rb.gravityScale;
+
+        _spawnPos = transform.position;
     }
 
     private void Update()

@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
     [SerializeField] private int _health = 3;
     [SerializeField] private UnityEvent _onDeath;
-    private int _maxHealth;
+    public int _maxHealth { get; private set; }
 
     void Start()
     {
@@ -20,7 +21,24 @@ public class HealthManager : MonoBehaviour
         if (_health == 0)
         {
             _onDeath?.Invoke();
-            Destroy(gameObject);
+            
+            if (TryGetComponent<Animator>(out Animator animator))
+            {
+                animator.SetTrigger("death");
+            }
+
+            if (TryGetComponent<PlayerMoving>(out PlayerMoving playerMovement))
+            {
+                Transition._instance.PlayTransition(true);
+                SceneChanger._instance.ChangeSceneWithDelay(SceneManager.GetActiveScene().buildIndex);
+            }
+
+            Destroy(gameObject, 1f);
         }
+    }
+
+    public void AddHealth(int health)
+    {
+        _health = Math.Clamp(_health + health, 0, _maxHealth);
     }
 }

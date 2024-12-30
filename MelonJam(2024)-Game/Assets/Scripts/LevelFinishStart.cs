@@ -8,7 +8,7 @@ public class LevelFinishStart : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            FindAnyObjectByType<SceneChanger>().ChangeSceneWithDelay(nextSceneIndex, delayChanging);
+            FindAnyObjectByType<SceneChanger>().ChangeSceneWithDelay(nextSceneIndex);
         }
     }
 }

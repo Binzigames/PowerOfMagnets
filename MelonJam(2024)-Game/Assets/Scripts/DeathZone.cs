@@ -9,7 +9,10 @@ public class DeathZone : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            FindAnyObjectByType<SceneChanger>().ChangeSceneWithDelay(SceneManager.GetActiveScene().buildIndex);
+            // FindAnyObjectByType<SceneChanger>().ChangeSceneWithDelay(SceneManager.GetActiveScene().buildIndex);
+            collision.transform.position = collision.GetComponent<PlayerMoving>()._spawnPos;
+            HealthManager healthManager = collision.transform.GetComponent<HealthManager>();
+            healthManager.AddHealth(healthManager._maxHealth);
         }
         for (int i = 0; i < tagsDestroy.Length; i++)
         {

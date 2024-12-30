@@ -50,6 +50,11 @@ public class Transition : MonoBehaviour
         }
         else
         {
+            if (_transition == null)
+            {
+                _transition = transform.GetChild(0).GetChild(0);
+            }
+            
             _transition.DOMoveY(_downEndPos.position.y, _transitionTime).SetDelay(_delayTime);
         }
     }

@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class MovingButton : MonoBehaviour
 {
     [SerializeField] private UnityEvent _onEnterInAcceptZone;
+    [SerializeField] private bool _haveAction = true;
 
     void Start()
     {
@@ -19,7 +20,10 @@ public class MovingButton : MonoBehaviour
     {
         if (other.transform.tag == "AcceptButton")
         {
-            _onEnterInAcceptZone?.Invoke();
+            if (_haveAction)
+            {
+                _onEnterInAcceptZone?.Invoke();
+            }
         }
     }
 }

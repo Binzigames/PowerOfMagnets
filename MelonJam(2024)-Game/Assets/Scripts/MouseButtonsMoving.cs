@@ -23,6 +23,7 @@ public class MouseButtonsMoving : MonoBehaviour
                 Vector2 pushDirection = -(mouseWorldPos - new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y)).normalized;
                 Rigidbody2D rb = hit.collider.transform.GetComponent<Rigidbody2D>();
                 rb.velocity = pushDirection * _moveForce;
+                rb.AddTorque(1);
             }
         }
     }
