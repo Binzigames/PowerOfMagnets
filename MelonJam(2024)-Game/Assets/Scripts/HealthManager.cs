@@ -29,6 +29,7 @@ public class HealthManager : MonoBehaviour
 
             if (TryGetComponent<PlayerMoving>(out PlayerMoving playerMovement))
             {
+                playerMovement.SetCanMove(false);
                 Transition._instance.PlayTransition(true);
                 SceneChanger._instance.ChangeSceneWithDelay(SceneManager.GetActiveScene().buildIndex);
             }
