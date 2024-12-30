@@ -19,6 +19,11 @@ public class Boss : MonoBehaviour
         _healthManager = GetComponent<HealthManager>();
         _playerMoving = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMoving>();
 
+        _healthManager._onDeathEvent += ()=> {
+            SceneChanger._instance.ChangeSceneWithDelay(7);
+            Transition._instance.PlayTransition(true);
+        };
+
         StartCoroutine(AttackDelay());
     }
 

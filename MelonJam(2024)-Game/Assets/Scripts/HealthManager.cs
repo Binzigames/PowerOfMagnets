@@ -8,6 +8,7 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private int _health = 3;
     [SerializeField] private UnityEvent _onDeath;
     public int _maxHealth { get; private set; }
+    public event Action _onDeathEvent;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class HealthManager : MonoBehaviour
         if (_health == 0)
         {
             _onDeath?.Invoke();
+            _onDeathEvent?.Invoke();
             
             if (TryGetComponent<Animator>(out Animator animator))
             {

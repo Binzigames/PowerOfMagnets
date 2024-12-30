@@ -40,7 +40,6 @@ public class MagnetBullet : MonoBehaviour
             other.transform.GetChild(0).GetComponent<LightGun>().CanShoot();
             Destroy(gameObject);
         }
-
     }
 
     public void SetLighGun(LightGun lightGun)
