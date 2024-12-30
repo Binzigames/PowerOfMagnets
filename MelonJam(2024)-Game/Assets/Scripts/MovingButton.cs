@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class MovingButton : MonoBehaviour
 {
     [SerializeField] private UnityEvent _onEnterInAcceptZone;
+    [SerializeField] private bool _isPlayButton = false;
     [SerializeField] private bool _haveAction = true;
 
     void Start()
@@ -23,6 +24,12 @@ public class MovingButton : MonoBehaviour
             if (_haveAction)
             {
                 _onEnterInAcceptZone?.Invoke();
+
+                if (_isPlayButton)
+                {
+                    SceneChanger._instance.ChangeSceneWithDelay(1);
+                    Transition._instance.PlayTransition();
+                }
             }
         }
     }
