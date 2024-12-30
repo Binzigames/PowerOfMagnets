@@ -7,6 +7,7 @@ TagManager:
   - Button
   - AcceptButton
   - DeathZone
+  - Enemy
   layers:
   - Default
   - TransparentFX
