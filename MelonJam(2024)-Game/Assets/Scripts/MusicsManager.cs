@@ -6,17 +6,28 @@ public class MusicsManager : MonoBehaviour
     [SerializeField] private AudioClip _mainMenuMusic;
     [SerializeField] private AudioClip _levelsuMusic;
     [SerializeField] private AudioClip _bossFightMusic;
-    private AudioSource _audioSource;
+    public AudioSource _audioSource { get; private set; }
     private int _lastSceneIndex = 0;
+
+    public static MusicsManager _instance { get; private set; }
 
     void Start()
     {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         DontDestroyOnLoad(gameObject);
 
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = _mainMenuMusic;
         _audioSource.Play();
-        // SceneManager.activeSceneChanged += OnSceneChanged;
     }
 
     void Update()
