@@ -7,7 +7,7 @@ public class DroneGun : MonoBehaviour
     [SerializeField] private Transform _dronePos;
     private CinemachineVirtualCamera _virtualCamera;
     private PlayerMoving _playerMoving;
-    private Drone _drone;
+    private PlayerMoving _drone;
     private bool _spawned = false;
     private bool _droneControls = false;
 
@@ -22,7 +22,7 @@ public class DroneGun : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && !_spawned)
         {
             _spawned = true;
-            _drone = Instantiate(_dronePrefab, _dronePos.position, Quaternion.identity).GetComponent<Drone>();
+            _drone = Instantiate(_dronePrefab, _dronePos.position, Quaternion.identity).GetComponent<PlayerMoving>();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
