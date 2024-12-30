@@ -35,10 +35,12 @@ public class GunEnemy : MonoBehaviour
     private float shootTimer = 0;
     private Transform player;
     private Rigidbody2D rb;
+    private Animator animator;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
         point = pointOne.position.x;
@@ -110,16 +112,20 @@ public class GunEnemy : MonoBehaviour
     {
         float direction = transform.rotation.eulerAngles.y == 0 ? 1 : -1;
 
+        animator.SetBool("isRunning", true);
         rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
     }
 
     private void StopMovement()
     {
         rb.velocity = Vector2.zero;
+        animator.SetBool("isRunning", false);
     }
 
     private void Shoot()
     {
+        animator.SetBool("isFighting", true);
+
         GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -131,8 +137,11 @@ public class GunEnemy : MonoBehaviour
 
     private void Patrol()
     {
+        animator.SetBool("isFighting", false);
+
         if (Mathf.Abs(transform.position.x - point) < 0.1f)
         {
+            animator.SetBool("isRunning", false);
             rb.velocity = Vector2.zero;
             patrolTimer += Time.deltaTime;
             if (patrolTimer >= timeOnPoint)
@@ -149,6 +158,7 @@ public class GunEnemy : MonoBehaviour
         }
         else
         {
+            animator.SetBool("isRunning", true);
             if (transform.position.x > point)
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
