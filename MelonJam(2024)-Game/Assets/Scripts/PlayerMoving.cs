@@ -20,6 +20,8 @@ public class PlayerMoving : MonoBehaviour
     private bool isStairs;
     private float defaultGravityScale;
 
+    public bool _canMove { get; private set;}
+
     private Animator animator;
 
     public Vector2 _spawnPos { get; private set; }
@@ -31,16 +33,26 @@ public class PlayerMoving : MonoBehaviour
         defaultGravityScale = rb.gravityScale;
 
         _spawnPos = transform.position;
+        _canMove = true;
     }
 
     private void Update()
     {
+        if (!_canMove)
+        {
+            rb.velocity = new Vector3(0, rb.velocity.y);  
+            return;
+        }
+
         Jumping();
         Stairs();
     }
 
     private void FixedUpdate()
     {
+        if (!_canMove)
+            return;
+
         Walking();
     }
 
@@ -113,5 +125,10 @@ public class PlayerMoving : MonoBehaviour
         {
             rb.gravityScale = defaultGravityScale;
         }
+    }
+
+    public void SetCanMove(bool canMove)
+    {
+        _canMove = canMove;
     }
 }

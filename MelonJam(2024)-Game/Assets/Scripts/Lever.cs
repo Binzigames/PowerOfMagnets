@@ -2,14 +2,15 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    private Transform player;
+    private Transform _player;
+    private GameObject _drone;
     [SerializeField] private float _minInteractableDistance;
 
     [Space]
     [SerializeField] Transform _gameObjectToMove;
     [SerializeField] private float _moveSpeed;
 
-    private Animator animator;
+    private Animator _animator;
 
     [Space]
     [SerializeField] private Transform _firstPos;
@@ -24,25 +25,43 @@ public class Lever : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        animator = GetComponent<Animator>();
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _drone = GameObject.FindGameObjectWithTag("Drone");
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Vector3.Distance(transform.position, player.position) < _minInteractableDistance)
+            bool droneInteraction = false;
+            if (_drone == null)
+            {
+                _drone = GameObject.FindGameObjectWithTag("Drone");
+                if (_drone != null)
+                {
+                    droneInteraction = Vector3.Distance(transform.position, _drone.transform.position) < _minInteractableDistance;
+                }
+            }
+            else
+            {
+                if (_drone != null)
+                {
+                    droneInteraction = Vector3.Distance(transform.position, _drone.transform.position) < _minInteractableDistance;
+                }
+            }
+
+            if (Vector3.Distance(transform.position, _player.position) < _minInteractableDistance || droneInteraction)
             {
                 if (_leverState == LeverState.On)
                 {
                     _leverState = LeverState.Off;
-                    animator.SetBool("on", false);
+                    _animator.SetBool("on", false);
                 }
                 else if (_leverState == LeverState.Off)
                 {
                     _leverState = LeverState.On;
-                    animator.SetBool("on", true);
+                    _animator.SetBool("on", true);
                 }
             }
 
