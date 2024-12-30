@@ -49,14 +49,14 @@ public class Lever : MonoBehaviour
         }
         if (_leverState == LeverState.On)
         {
-            if (Vector2.Distance(_gameObjectToMove.position, _secondPos.position) > 0.1f)
+            if (Vector2.Distance(_gameObjectToMove.position, _secondPos.position) > 0.001f)
             {
                 _gameObjectToMove.position = Vector2.MoveTowards(_gameObjectToMove.position, _secondPos.position, _moveSpeed * Time.deltaTime);
             }
         }
         else if (_leverState == LeverState.Off)
         {
-            if (Vector2.Distance(_gameObjectToMove.position, _firstPos.position) > 0.1f)
+            if (Vector2.Distance(_gameObjectToMove.position, _firstPos.position) > 0.001f)
             {
                 _gameObjectToMove.position = Vector2.MoveTowards(_gameObjectToMove.position, _firstPos.position, _moveSpeed * Time.deltaTime);
             }

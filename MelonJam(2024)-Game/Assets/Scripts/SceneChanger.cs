@@ -4,19 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    [SerializeField] private float _changeSceneDelay = 2f;
-
     public void ChangeScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
     }
 
-    public void ChangeSceneWithDelay(int sceneIndex)
+    public void ChangeSceneWithDelay(int sceneIndex, float _changeSceneDelay = 0)
     {
-        StartCoroutine(ChangeSceneWithDelayIEnumerator(sceneIndex));
+        StartCoroutine(ChangeSceneWithDelayIEnumerator(sceneIndex, _changeSceneDelay));
     }
 
-    IEnumerator ChangeSceneWithDelayIEnumerator(int sceneIndex)
+    private IEnumerator ChangeSceneWithDelayIEnumerator(int sceneIndex, float _changeSceneDelay = 0)
     {
         yield return new WaitForSeconds(_changeSceneDelay);
         SceneManager.LoadScene(sceneIndex);
