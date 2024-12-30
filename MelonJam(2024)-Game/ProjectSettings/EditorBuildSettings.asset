@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 5.unity
     guid: 99c55ad0f5d609e488a3971de43b62b7
   - enabled: 1
+    path: Assets/Scenes/BOSS FIGHT.unity
+    guid: 0930ff9ba3f102c48b24f3d94a453991
+  - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: b34b70e112e92ff4cb22fe0c0706d313
   m_configObjects: {}

@@ -28,7 +28,7 @@ public class MovingButton : MonoBehaviour
                 if (_isPlayButton)
                 {
                     SceneChanger._instance.ChangeSceneWithDelay(1);
-                    Transition._instance.PlayTransition();
+                    Transition._instance.PlayTransition(true);
                 }
             }
         }

@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 14877358}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.54, y: 1.77, z: 0}
+  m_LocalPosition: {x: 0, y: 0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -410,7 +410,7 @@ Transform:
   m_GameObject: {fileID: 38353331}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: -0.33, z: 0}
+  m_LocalPosition: {x: 0, y: -2.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -435,7 +435,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 455598622}
         m_TargetAssemblyTypeName: SoundOffOn, Assembly-CSharp
-        m_MethodName: EnableDisableSounds
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7265,7 +7265,7 @@ Transform:
   m_GameObject: {fileID: 841276309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: 1.52, z: 0}
+  m_LocalPosition: {x: 0, y: -0.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7290,7 +7290,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 597880799}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9243,7 +9243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1199555385079780122, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1200
+      value: -1100
       objectReference: {fileID: 0}
     - target: {fileID: 1643000931966121540, guid: 035b804527559e441843786c5091b584, type: 3}
       propertyPath: m_Name
