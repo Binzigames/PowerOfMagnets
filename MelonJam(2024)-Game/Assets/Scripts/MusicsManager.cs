@@ -44,16 +44,19 @@ public class MusicsManager : MonoBehaviour
     {
         if (_lastSceneIndex == 0)
         {
+            _audioSource.Stop();
             _audioSource.clip = _mainMenuMusic;
             _audioSource.Play();
         }
         else if (_lastSceneIndex == 1)
         {
+            _audioSource.Stop();
             _audioSource.clip = _levelsuMusic;
             _audioSource.Play();
         }
         else if (_lastSceneIndex == 6)
         {
+            _audioSource.Stop();
             _audioSource.clip = _bossFightMusic;
             _audioSource.Play();
         }

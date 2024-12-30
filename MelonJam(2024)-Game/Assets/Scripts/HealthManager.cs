@@ -42,4 +42,9 @@ public class HealthManager : MonoBehaviour
     {
         _health = Math.Clamp(_health + health, 0, _maxHealth);
     }
+
+    public int GetHealth()
+    {
+        return _health;
+    }
 }
