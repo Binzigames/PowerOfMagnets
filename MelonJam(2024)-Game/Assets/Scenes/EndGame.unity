@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -346,12 +345,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!81 &164456655
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5765,6 +5764,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _isPlayButton: 0
+  _isMusicButton: 0
   _haveAction: 1
 --- !u!50 &829278180
 Rigidbody2D:
@@ -5913,6 +5913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 979975038}
+  - component: {fileID: 979975042}
   - component: {fileID: 979975040}
   - component: {fileID: 979975039}
   - component: {fileID: 979975041}
@@ -5992,7 +5993,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.3
+  m_fontSize: 39.5
   m_fontSizeBase: 64.69
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6028,7 +6029,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -343.87915, w: -813.3489}
+  m_margin: {x: 0, y: 0, z: -343.87915, w: -964.77515}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6055,6 +6056,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextSpeed: 0.5
+--- !u!114 &979975042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979975037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbafca35d8df99942932e87db82e0093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextToLocalized: {fileID: 979975039}
+  textToLoad: "Power Of Magnets ------ \u0430\u0432\u0442\u043E\u0440\u0438  Porko
+    (YK) - Team Lead, musician, game designer, 2d artist  Timong-  Team lead 2, programmer 
+    PRO - programmer Programmer  Mitchael - Game designer ---------- \u043F\u043E\u0434\u044F\u043A\u0438
+    LastStalker 5 Title Kilsufat  ------- \u0414\u044F\u043A\u0443\u044E \u0437\u0430
+    \u0433\u0440\u0443 \u0421\u043B\u0430\u0432\u0430 \u0423\u043A\u0440\u0430\u0457\u043D\u0456"
 --- !u!1 &1229281176
 GameObject:
   m_ObjectHideFlags: 0
@@ -6482,6 +6501,7 @@ GameObject:
   - component: {fileID: 1951565240}
   - component: {fileID: 1951565242}
   - component: {fileID: 1951565241}
+  - component: {fileID: 1951565243}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -6605,6 +6625,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951565239}
   m_CullTransparentMesh: 1
+--- !u!114 &1951565243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951565239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbafca35d8df99942932e87db82e0093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextToLocalized: {fileID: 1951565241}
+  textToLoad: "\u0412\u0438\u0445\u0456\u0434"
 --- !u!1 &2021302943
 GameObject:
   m_ObjectHideFlags: 0
